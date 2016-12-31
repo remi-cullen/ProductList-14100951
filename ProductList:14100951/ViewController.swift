@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
 
     
     @IBOutlet weak var tableView: UITableView!
@@ -20,7 +20,19 @@ class ViewController: UIViewController {
     
     @IBAction func addItem(_ sender: UIButton)
     {
-        
+        if textField.text != "" {
+        self.tableView.dataSource = self
+        let itemName = textField.text
+        self.saveName(name: itemName!)
+        let alert = UIAlertController(title: "New Product", message: "\(itemName) added to your shopping list", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: {(action: UIAlertAction) -> Void in
+            
+            print("\(itemName) added to your shopping list")
+        })
+        self.tableView.reloadData()
+        textField.text = ""
+        textField.resignFirstResponder()
+        }
     }
     
     
@@ -44,6 +56,18 @@ class ViewController: UIViewController {
         }
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return products.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let item = products[indexPath.row]
+        cell.textLabel?.text = item.value(forKey: "name") as? String
+        
+        return cell
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "My Shopping List"
