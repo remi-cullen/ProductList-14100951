@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     
     @IBOutlet weak var tableView: UITableView!
@@ -64,6 +64,7 @@ class ViewController: UIViewController, UITableViewDataSource {
             print(error)
         }
     }
+/*************Table View Methods**************/
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -77,6 +78,18 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
+    //checkmarks
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
+    }
+    //delete
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        <#code#>
+    }
+    
+    
+/***************End****************************/
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "My Shopping List"
