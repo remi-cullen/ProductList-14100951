@@ -15,30 +15,39 @@ class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var textField: UITextField!
-    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var products = [NSManagedObject]() //Core data object array that will load and save items
     
     @IBAction func addItem(_ sender: UIButton)
     {
-        if textField.text != "" {
-        self.tableView.dataSource = self
-        let itemName = textField.text
-        self.saveName(name: itemName!)
-        let alert = UIAlertController(title: "New Product", message: "\(itemName) added to your shopping list", preferredStyle: .alert)
-        let ok = UIAlertAction(title: "OK", style: .default, handler: {(action: UIAlertAction) -> Void in
+        if textField.text != ""
+        {
+            self.tableView.dataSource = self
+            let itemName = textField.text!
+            self.saveName(name: itemName)
+            //let alert = UIAlertController(title: "New Product", message: "\(itemName) added to your shopping list", preferredStyle: .alert)
+            //let ok = UIAlertAction(title: "OK", style: .default, handler:
+                //{(action: UIAlertAction) -> Void in
             
-            print("\(itemName) added to your shopping list")
-        })
-        self.tableView.reloadData()
-        textField.text = ""
-        textField.resignFirstResponder()
+                  //  print("\(itemName) added to your shopping list")
+                //})
+            self.tableView.reloadData()
+            textField.text = ""
+            textField.resignFirstResponder()
+            
+       // alert.addAction(ok)
+        //present(alert, animated: true, completion: nil)
+        
         }
-    }
     
+        
+        
+}
+
     
     func saveName(name: String) {  //coreData function to save a name with the value name which is already set in the coreData entity
         //call on the app delegate to accept data
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
         
         let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
@@ -72,7 +81,19 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         title = "My Shopping List"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Item")
+        
+        do {
+            let results = try managedContext.fetch(fetchRequest)
+            products = results as! [NSManagedObject]
+        }
+        catch let error as NSError {
+            print(error)
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
