@@ -79,12 +79,54 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     //checkmarks
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        let thisRow = tableView.cellForRow(at: indexPath)!
+        
+        if thisRow.accessoryType == UITableViewCellAccessoryType.none
+        {
+            thisRow.accessoryType = UITableViewCellAccessoryType.checkmark
+            thisRow.tintColor = UIColor.blue
+            let itemName = thisRow.textLabel?.text
+            let alert = UIAlertController(title: "New Product", message: "\(itemName!) added to your shopping cart", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default, handler:
+            {(action: UIAlertAction) -> Void in
+            
+              print("\(itemName! ) added to your shopping cart")
+            })
+             alert.addAction(ok)
+            present(alert, animated: true, completion: nil)
+         }
+        else
+        {//also if the item is already oin the shopping cart , stop the adding of a new one
+            thisRow.accessoryType = UITableViewCellAccessoryType.none
+        }
+        
     }
     //delete
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        <#code#>
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        print("Deleted")
+        let deletedRow = tableView.cellForRow(at: indexPath)!
+        if editingStyle == UITableViewCellEditingStyle.delete
+        {
+            //Delete from coreData
+            //let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            
+            let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            do {
+                try managedContext.delete(products[indexPath.row])
+                products.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+                deletedRow.accessoryType = UITableViewCellAccessoryType.none
+                try managedContext.save()
+            } catch let error as NSError {
+                print(error)
+            }
+            tableView.reloadData()
+            
+            
+        }
     }
     
     
