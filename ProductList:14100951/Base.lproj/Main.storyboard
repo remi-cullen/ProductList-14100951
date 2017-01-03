@@ -13,7 +13,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProductList_14100951" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -88,13 +87,14 @@
                         <outlet property="textField" destination="HXc-lW-mIx" id="BrU-Ox-PpE"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="540" y="-825.33733133433293"/>
         </scene>
-        <!--View Controller-->
+        <!--Saved Recipes-->
         <scene sceneID="Jds-hl-YYX">
             <objects>
-                <viewController id="0VJ-mi-jgj" sceneMemberID="viewController">
+                <viewController title="Saved Recipes" id="0VJ-mi-jgj" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kos-zV-b67"/>
                         <viewControllerLayoutGuide type="bottom" id="1at-72-XoI"/>
@@ -102,12 +102,190 @@
                     <view key="view" contentMode="scaleToFill" id="F3j-5N-cMi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiB-FZ-Z66">
+                                <rect key="frame" x="33" y="103" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Yf-h6-7ng">
+                                <rect key="frame" x="203" y="380" width="127" height="90"/>
+                                <state key="normal" title="Button" image="FriedChicken.png"/>
+                                <connections>
+                                    <segue destination="nCx-Qw-XF3" kind="show" id="hAG-IQ-h5z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIY-yP-gYS">
+                                <rect key="frame" x="33" y="379" width="119" height="93"/>
+                                <state key="normal" title="Button" image="FoodSceenSh.png"/>
+                                <connections>
+                                    <segue destination="5zw-AD-I86" kind="show" id="VtE-Pu-2ia"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chilli Chicken" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Byk-Pb-BNz">
+                                <rect key="frame" x="33" y="480" width="119" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fried Chicken" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kza-QH-bdK">
+                                <rect key="frame" x="203" y="480" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GND-V4-2v7">
+                                <rect key="frame" x="24" y="103" width="327" height="175"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97651273012161255" green="0.96914690732955933" blue="0.92101424932479858" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Recipes: this feature allows you to save your favourite foods from different blogs across the internet. Below are some meals already saved, Click on the items below to see their ingredient list. Then add it to your basket!</string>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Byk-Pb-BNz" secondAttribute="trailing" constant="207" id="7H3-RI-AMx"/>
+                            <constraint firstItem="2Yf-h6-7ng" firstAttribute="top" secondItem="Kos-zV-b67" secondAttribute="bottom" constant="316" id="OMc-5o-STG"/>
+                            <constraint firstItem="Byk-Pb-BNz" firstAttribute="top" secondItem="kIY-yP-gYS" secondAttribute="bottom" constant="8" id="R9K-o3-AQ8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Yf-h6-7ng" secondAttribute="trailing" constant="29" id="XVp-cK-JFs"/>
+                            <constraint firstItem="1at-72-XoI" firstAttribute="top" secondItem="kIY-yP-gYS" secondAttribute="bottom" constant="195" id="YWh-4l-CoO"/>
+                            <constraint firstItem="Byk-Pb-BNz" firstAttribute="leading" secondItem="F3j-5N-cMi" secondAttribute="leadingMargin" constant="17" id="YeL-Wv-vhF"/>
+                            <constraint firstItem="1at-72-XoI" firstAttribute="top" secondItem="Byk-Pb-BNz" secondAttribute="bottom" constant="166" id="ZdK-wO-uPo"/>
+                            <constraint firstItem="Byk-Pb-BNz" firstAttribute="top" secondItem="Kos-zV-b67" secondAttribute="bottom" constant="416" id="aAK-kk-PFi"/>
+                            <constraint firstItem="kza-QH-bdK" firstAttribute="top" secondItem="2Yf-h6-7ng" secondAttribute="bottom" constant="10" id="b3W-CZ-8c5"/>
+                            <constraint firstItem="kIY-yP-gYS" firstAttribute="top" secondItem="Kos-zV-b67" secondAttribute="bottom" constant="315" id="c2Z-HO-0Hm"/>
+                            <constraint firstItem="1at-72-XoI" firstAttribute="top" secondItem="2Yf-h6-7ng" secondAttribute="bottom" constant="197" id="h5A-9j-6bd"/>
+                            <constraint firstItem="1at-72-XoI" firstAttribute="top" secondItem="kza-QH-bdK" secondAttribute="bottom" constant="166" id="kBg-yv-CRB"/>
+                            <constraint firstItem="2Yf-h6-7ng" firstAttribute="leading" secondItem="kIY-yP-gYS" secondAttribute="trailing" constant="51" id="mWe-cX-o6i"/>
+                            <constraint firstItem="kza-QH-bdK" firstAttribute="leading" secondItem="Byk-Pb-BNz" secondAttribute="trailing" constant="51" id="nEk-Hn-0SY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kza-QH-bdK" secondAttribute="trailing" constant="29" id="qsa-JR-OPj"/>
+                            <constraint firstItem="kza-QH-bdK" firstAttribute="top" secondItem="Kos-zV-b67" secondAttribute="bottom" constant="416" id="rGP-gL-ldW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kIY-yP-gYS" secondAttribute="trailing" constant="207" id="tk7-8f-utr"/>
+                            <constraint firstItem="kza-QH-bdK" firstAttribute="leading" secondItem="F3j-5N-cMi" secondAttribute="leadingMargin" constant="187" id="vJt-Ls-VaX"/>
+                            <constraint firstItem="kIY-yP-gYS" firstAttribute="leading" secondItem="F3j-5N-cMi" secondAttribute="leadingMargin" constant="17" id="zAZ-TK-gkx"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oce-Jk-CU9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1236" y="-824"/>
+            <point key="canvasLocation" x="1236" y="-824.43778110944538"/>
+        </scene>
+        <!--Chilli Chicken-->
+        <scene sceneID="Mek-Zi-tXi">
+            <objects>
+                <viewController title="Chilli Chicken" id="5zw-AD-I86" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bqu-3v-QlU"/>
+                        <viewControllerLayoutGuide type="bottom" id="R8l-Eg-xrs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ki8-Jy-gWc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LargeNoodle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RcA-LN-yto">
+                                <rect key="frame" x="25" y="96" width="326" height="188"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" text="Sugar Salt  Chicken  Noodles   Leeks Sauce  " textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XY2-Pr-k7M">
+                                <rect key="frame" x="25" y="361" width="68" height="113"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="no"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4j-Hc-BRZ">
+                                <rect key="frame" x="25" y="300" width="326" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqc-df-HOf">
+                                <rect key="frame" x="20" y="474" width="334" height="193"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Peel the chicken from the packaging making sure that you remove all the fat from the fillets. Next give the chicken a good wash down with lemon juice (water is just as good) . Carefully cut the chicken into blocks and fry the chicken until golden. Next boil the noodles for 15 minutes on a medium heat with salt and sugar. After the noodles have cooked stur the chopped leaks in with the chicken and noodles , while gently pouring sweet &amp; sour sauce. Serve as you please. Enjoy!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RcA-LN-yto" firstAttribute="top" secondItem="Bqu-3v-QlU" secondAttribute="bottom" constant="32" id="3NH-KW-IrV"/>
+                            <constraint firstItem="XY2-Pr-k7M" firstAttribute="leading" secondItem="ki8-Jy-gWc" secondAttribute="leadingMargin" constant="9" id="ElC-Eo-cfb"/>
+                            <constraint firstItem="P4j-Hc-BRZ" firstAttribute="leading" secondItem="ki8-Jy-gWc" secondAttribute="leadingMargin" constant="9" id="Fmq-zN-tfy"/>
+                            <constraint firstItem="R8l-Eg-xrs" firstAttribute="top" secondItem="P4j-Hc-BRZ" secondAttribute="bottom" constant="338" id="Jyc-72-wId"/>
+                            <constraint firstItem="P4j-Hc-BRZ" firstAttribute="top" secondItem="RcA-LN-yto" secondAttribute="bottom" constant="16" id="PCR-ly-i1N"/>
+                            <constraint firstItem="R8l-Eg-xrs" firstAttribute="top" secondItem="XY2-Pr-k7M" secondAttribute="bottom" constant="193" id="Z6W-Ll-aQ5"/>
+                            <constraint firstItem="R8l-Eg-xrs" firstAttribute="top" secondItem="RcA-LN-yto" secondAttribute="bottom" constant="383" id="ZtZ-Bm-HDC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XY2-Pr-k7M" secondAttribute="trailing" constant="277" id="a3w-qK-zXr"/>
+                            <constraint firstItem="P4j-Hc-BRZ" firstAttribute="top" secondItem="Bqu-3v-QlU" secondAttribute="bottom" constant="305" id="c93-Lo-mrW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="P4j-Hc-BRZ" secondAttribute="trailing" constant="8" id="cVq-kp-GKJ"/>
+                            <constraint firstItem="gqc-df-HOf" firstAttribute="top" secondItem="Bqu-3v-QlU" secondAttribute="bottom" constant="471" id="dRb-0P-5bK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RcA-LN-yto" secondAttribute="trailing" constant="8" id="fmD-2Q-AIP"/>
+                            <constraint firstItem="XY2-Pr-k7M" firstAttribute="top" secondItem="Bqu-3v-QlU" secondAttribute="bottom" constant="326" id="gdb-ru-4zk"/>
+                            <constraint firstItem="RcA-LN-yto" firstAttribute="leading" secondItem="ki8-Jy-gWc" secondAttribute="leadingMargin" constant="9" id="gnn-xB-i6e"/>
+                            <constraint firstItem="R8l-Eg-xrs" firstAttribute="top" secondItem="gqc-df-HOf" secondAttribute="bottom" constant="8" id="jBd-WM-v8S"/>
+                            <constraint firstItem="gqc-df-HOf" firstAttribute="leading" secondItem="ki8-Jy-gWc" secondAttribute="leadingMargin" constant="9" id="m6h-Ov-f5q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gqc-df-HOf" secondAttribute="trailing" id="mdT-B6-IyY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1c9-Km-Et6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2053.5999999999999" y="-1252.6236881559221"/>
+        </scene>
+        <!--Fried Chicken-->
+        <scene sceneID="bUN-yd-5A8">
+            <objects>
+                <viewController title="Fried Chicken" id="nCx-Qw-XF3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aTs-CK-h7c"/>
+                        <viewControllerLayoutGuide type="bottom" id="AyO-L9-Qnq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yfz-Im-YQL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ingredients" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hj-cS-7gu">
+                                <rect key="frame" x="16" y="320" width="343" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LargeFriedImage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7Vr-6x-DJ7">
+                                <rect key="frame" x="16" y="84" width="343" height="222"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Eggs Flour  Lettuce Chicken Spices Sauce" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZO-wM-7Rz">
+                                <rect key="frame" x="16" y="355" width="69" height="112"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" keyboardDismissMode="interactive" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vn4-CW-M6J">
+                                <rect key="frame" x="16" y="475" width="343" height="172"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Carefully remove the chicken wings from the packaging and clean with lemon juice or water. Next batter an egg and leave in a bowl. mix the spices in with the flour to create unique spices and combinations.  With each chicken wing apply egg wash and roll into the flour combination. Fry on each side until golden. Place the fried chicken in the oven to cook. Serve with a side of salad and sauce. Enjoy!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hZO-wM-7Rz" firstAttribute="top" secondItem="aTs-CK-h7c" secondAttribute="bottom" constant="291" id="B7w-s8-T98"/>
+                            <constraint firstItem="AyO-L9-Qnq" firstAttribute="top" secondItem="hZO-wM-7Rz" secondAttribute="bottom" constant="200" id="BiU-nz-79F"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="hZO-wM-7Rz" secondAttribute="leading" id="Qxc-w8-duO"/>
+                            <constraint firstItem="7Hj-cS-7gu" firstAttribute="centerY" secondItem="yfz-Im-YQL" secondAttribute="centerY" id="aOs-I0-uzK"/>
+                            <constraint firstItem="Vn4-CW-M6J" firstAttribute="top" secondItem="hZO-wM-7Rz" secondAttribute="bottom" constant="8" id="uVq-f6-3ku"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hZO-wM-7Rz" secondAttribute="trailing" constant="274" id="v5u-gP-8Ms"/>
+                            <constraint firstItem="7Hj-cS-7gu" firstAttribute="centerX" secondItem="yfz-Im-YQL" secondAttribute="centerX" id="xwS-nN-aih"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yLX-ps-yoU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2724" y="-1253.5232383808097"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OV0-wr-EHH">
@@ -128,4 +306,10 @@
             <point key="canvasLocation" x="-266.39999999999998" y="-824.43778110944538"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="FoodSceenSh.png" width="124" height="89"/>
+        <image name="FriedChicken.png" width="124" height="91"/>
+        <image name="LargeFriedImage.jpg" width="640" height="426"/>
+        <image name="LargeNoodle.jpg" width="640" height="426"/>
+    </resources>
 </document>
