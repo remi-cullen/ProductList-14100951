@@ -253,9 +253,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LargeFriedImage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7Vr-6x-DJ7">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LargeFriedImage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7Vr-6x-DJ7">
                                 <rect key="frame" x="16" y="84" width="343" height="222"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Eggs Flour  Lettuce Chicken Spices Sauce" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZO-wM-7Rz">
                                 <rect key="frame" x="16" y="355" width="69" height="112"/>
@@ -263,7 +262,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" keyboardDismissMode="interactive" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vn4-CW-M6J">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" keyboardDismissMode="interactive" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vn4-CW-M6J">
                                 <rect key="frame" x="16" y="475" width="343" height="172"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Carefully remove the chicken wings from the packaging and clean with lemon juice or water. Next batter an egg and leave in a bowl. mix the spices in with the flour to create unique spices and combinations.  With each chicken wing apply egg wash and roll into the flour combination. Fry on each side until golden. Place the fried chicken in the oven to cook. Serve with a side of salad and sauce. Enjoy!</string>
@@ -273,10 +272,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="AyO-L9-Qnq" firstAttribute="top" secondItem="Vn4-CW-M6J" secondAttribute="bottom" constant="20" id="Av5-iH-AjD"/>
                             <constraint firstItem="hZO-wM-7Rz" firstAttribute="top" secondItem="aTs-CK-h7c" secondAttribute="bottom" constant="291" id="B7w-s8-T98"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Vn4-CW-M6J" secondAttribute="leading" id="BEz-QC-QZN"/>
                             <constraint firstItem="AyO-L9-Qnq" firstAttribute="top" secondItem="hZO-wM-7Rz" secondAttribute="bottom" constant="200" id="BiU-nz-79F"/>
+                            <constraint firstItem="Vn4-CW-M6J" firstAttribute="top" secondItem="aTs-CK-h7c" secondAttribute="bottom" constant="411" id="JpX-hb-yvG"/>
                             <constraint firstAttribute="leadingMargin" secondItem="hZO-wM-7Rz" secondAttribute="leading" id="Qxc-w8-duO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7Vr-6x-DJ7" secondAttribute="trailing" id="Waw-N7-6Vg"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="7Vr-6x-DJ7" secondAttribute="leading" id="a5q-5O-2YO"/>
                             <constraint firstItem="7Hj-cS-7gu" firstAttribute="centerY" secondItem="yfz-Im-YQL" secondAttribute="centerY" id="aOs-I0-uzK"/>
+                            <constraint firstItem="AyO-L9-Qnq" firstAttribute="top" secondItem="7Vr-6x-DJ7" secondAttribute="bottom" constant="361" id="g0F-ia-NrI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vn4-CW-M6J" secondAttribute="trailing" id="mRa-H1-x3A"/>
+                            <constraint firstItem="7Vr-6x-DJ7" firstAttribute="top" secondItem="aTs-CK-h7c" secondAttribute="bottom" constant="20" id="nDh-dc-O6d"/>
                             <constraint firstItem="Vn4-CW-M6J" firstAttribute="top" secondItem="hZO-wM-7Rz" secondAttribute="bottom" constant="8" id="uVq-f6-3ku"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hZO-wM-7Rz" secondAttribute="trailing" constant="274" id="v5u-gP-8Ms"/>
                             <constraint firstItem="7Hj-cS-7gu" firstAttribute="centerX" secondItem="yfz-Im-YQL" secondAttribute="centerX" id="xwS-nN-aih"/>
