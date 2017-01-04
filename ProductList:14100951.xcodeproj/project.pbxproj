@@ -15,7 +15,6 @@
 		9269D4611E15607800023419 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9269D45F1E15607800023419 /* LaunchScreen.storyboard */; };
 		9269D46C1E15607800023419 /* ProductList_14100951Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9269D46B1E15607800023419 /* ProductList_14100951Tests.swift */; };
 		9269D4771E15607900023419 /* ProductList_14100951UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9269D4761E15607900023419 /* ProductList_14100951UITests.swift */; };
-		9269D4851E1B12CE00023419 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9269D4841E1B12CD00023419 /* RecipeViewController.swift */; };
 		9269D48B1E1B24BB00023419 /* FoodSceenSh.png in Resources */ = {isa = PBXBuildFile; fileRef = 9269D48A1E1B24BB00023419 /* FoodSceenSh.png */; };
 		9269D48D1E1BCF9100023419 /* FriedChicken.png in Resources */ = {isa = PBXBuildFile; fileRef = 9269D48C1E1BCF9100023419 /* FriedChicken.png */; };
 		9269D48F1E1BFD4500023419 /* LargeFriedImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9269D48E1E1BFD4500023419 /* LargeFriedImage.jpg */; };
@@ -54,7 +53,6 @@
 		9269D4721E15607900023419 /* ProductList:14100951UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ProductList:14100951UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9269D4761E15607900023419 /* ProductList_14100951UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList_14100951UITests.swift; sourceTree = "<group>"; };
 		9269D4781E15607900023419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9269D4841E1B12CD00023419 /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		9269D48A1E1B24BB00023419 /* FoodSceenSh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FoodSceenSh.png; sourceTree = "<group>"; };
 		9269D48C1E1BCF9100023419 /* FriedChicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FriedChicken.png; sourceTree = "<group>"; };
 		9269D48E1E1BFD4500023419 /* LargeFriedImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = LargeFriedImage.jpg; path = ../LargeFriedImage.jpg; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 				9269D4531E15607800023419 /* AppDelegate.swift */,
 				9269D4551E15607800023419 /* ViewController.swift */,
 				9269D4571E15607800023419 /* Main.storyboard */,
-				9269D4841E1B12CD00023419 /* RecipeViewController.swift */,
 				9269D45D1E15607800023419 /* Assets.xcassets */,
 				9269D48A1E1B24BB00023419 /* FoodSceenSh.png */,
 				9269D48E1E1BFD4500023419 /* LargeFriedImage.jpg */,
@@ -284,7 +281,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9269D4851E1B12CE00023419 /* RecipeViewController.swift in Sources */,
 				9269D45C1E15607800023419 /* ProductList_14100951.xcdatamodeld in Sources */,
 				9269D4561E15607800023419 /* ViewController.swift in Sources */,
 				9269D4541E15607800023419 /* AppDelegate.swift in Sources */,
