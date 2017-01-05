@@ -19,7 +19,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSour
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     /*AUTOCOMPLETE SECTION*/
-   var autoCompleteWords = ["Apple", "Banana","Bread","Cake","Cookies","Crackers","Cucumber","Dates","Eggs","Milk","Cheese","Ham","Butter","Oranges","Tuna","Tomatoes","Chicken","Sauce","Noodles","Leeks","Salt","Sugar","Flour","Strawberrys","Lettuce","Spices","Bacon","Sweets"]
+   var autoCompleteWords = ["apple", "banana","bread","cake","cookies","crackers","cucumber","dates","eggs","milk","cheese","ham","butter","oranges","tuna","tomatoes","chicken","sauce","noodles","leeks","salt","sugar","flour","strawberrys","lettuce","spices","bacon","sweets","yoghurt","cream","soap","clothes","advacado","kettle","paper","beer","lager","fork","knife","spoon","tea","coffee","grapes","honey","samosa","pasta","rice","nuts","oil","donuts","newspaper","lobster","steak","mince","pesto","ketchup","tissue","deoderant","nappies","juice","chocolate","couscous","wine","potatoes","sweetcorn","asparagus","water","detergant","toothpaste","ice cream","mint","paprika","marmite","chocolate spread","peanut butter","onions"]
     var autoComplete = [String]()
     
     
@@ -48,6 +48,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSour
                 autoComplete.append(key)
             }
         }
+        
         secondTableView.reloadData()
     }
     /*************************************/
@@ -126,7 +127,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSour
         {
             let selectedCell: UITableViewCell = secondTableView.cellForRow(at: indexPath)!
             textField.text = selectedCell.textLabel!.text!
-            
+            secondTableView.reloadData()
+            tableView.reloadData()
             
         }
         else
